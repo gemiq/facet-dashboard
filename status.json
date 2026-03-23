@@ -1,91 +1,81 @@
 {
-  "lastUpdated": "2026-03-24T17:53:00Z",
+  "lastUpdated": "2026-03-24T18:13:00Z",
   "currentTask": {
-    "title": "Overnight research complete — reviewing remaining gaps",
+    "title": "Standby — queue blocked. 8am briefing prep.",
     "category": "Ops",
-    "startedAt": "2026-03-24T17:53:00Z",
-    "status": "in_progress"
+    "startedAt": "2026-03-24T18:13:00Z",
+    "status": "waiting"
   },
   "completedToday": [
     {
-      "title": "SmartLightbox product direction research",
-      "completedAt": "2026-03-24T17:45:00Z",
-      "notes": "Recommendation: Option A — AI mobile photography app. No hardware, 10x bigger market. research/smartlightbox-product-definition.md"
+      "title": "SmartLightbox MVP spec written",
+      "completedAt": "2026-03-24T18:07:00Z",
+      "notes": "drafts/smartlightbox-mvp-spec.md — 6-week build plan, PWA, AI pipeline, Stripe payments. Ready to build on William confirmation."
     },
     {
-      "title": "GemIQ AI-native dev standards written",
+      "title": "SmartLightbox product direction research",
+      "completedAt": "2026-03-24T17:45:00Z",
+      "notes": "Option A recommended: AI mobile app, no hardware, 10x market. research/smartlightbox-product-definition.md"
+    },
+    {
+      "title": "GemIQ AI dev standards",
       "completedAt": "2026-03-24T17:45:00Z",
       "notes": "Mandatory playbook for all devs. drafts/gemiq-ai-dev-standards.md"
     },
     {
-      "title": "Competitive intelligence 2026",
-      "completedAt": "2026-03-24T17:27:00Z",
-      "notes": "GemIQ market position, threats, opportunities. research/competitive-intelligence-2026.md"
-    },
-    {
-      "title": "AI workflows + agents playbook",
-      "completedAt": "2026-03-24T17:05:00Z",
-      "notes": "CEO guide, 90-day roadmap, 49hr/week savings. research/ai-workflows-playbook.md"
-    },
-    {
-      "title": "Jewelry tools market research",
+      "title": "Competitive intelligence + AI workflows playbook + jewelry tools research",
       "completedAt": "2026-03-24T17:08:00Z",
-      "notes": "First 3 SKUs, $5k test investment → $22k potential. research/jewelry-tools-market.md"
+      "notes": "3 research docs. All in ceo-workspace/research/"
     },
     {
-      "title": "Jetta meeting research",
+      "title": "Geneva meeting prep + Jetta research",
       "completedAt": "2026-03-24T17:35:00Z",
-      "notes": "research/jetta-meeting-research.md — prep for Thursday"
+      "notes": "All Thursday meetings briefed. drafts/planning/this-week-meetings.md"
     },
     {
-      "title": "Geneva meetings prep",
-      "completedAt": "2026-03-24T16:57:00Z",
-      "notes": "drafts/planning/this-week-meetings.md — all meetings briefed"
-    },
-    {
-      "title": "All 37 Monday tasks briefed + properly statused",
-      "completedAt": "2026-03-24T16:30:00Z",
-      "notes": "Ready to Review (10), Needs Decision (10), Working on it (13)"
-    },
-    {
-      "title": "4 repos built: gem-bot-ai, 1000-fans, GemSurf, retouching",
-      "completedAt": "2026-03-23T15:57:00Z",
-      "notes": "All deploy-ready, waiting on env vars from William"
-    },
-    {
-      "title": "Deep planning briefs for top 3 priorities",
+      "title": "Deep planning briefs — top 3 priorities",
       "completedAt": "2026-03-24T16:42:00Z",
-      "notes": "1000-fans, IT restructure, gem-bot-ai — hard questions on Monday"
+      "notes": "Hard questions on Monday for 1000-fans, IT, gem-bot-ai"
+    },
+    {
+      "title": "All 37 Monday tasks briefed + new status labels",
+      "completedAt": "2026-03-24T16:30:00Z",
+      "notes": "Ready to Review / Needs Decision / Working on it properly assigned"
+    },
+    {
+      "title": "4 repos built and pushed to GitHub",
+      "completedAt": "2026-03-23T15:57:00Z",
+      "notes": "gem-bot-ai, 1000-fans, jewelry-directory, gemiq-retouching — all deploy-ready"
     }
   ],
   "queued": [
     {
-      "title": "SmartLightbox MVP spec — once William confirms Option A",
+      "title": "SmartLightbox MVP build",
       "priority": "High",
-      "blockedBy": "William to confirm direction"
+      "blockedBy": "William to confirm Option A"
     },
     {
-      "title": "1000-fans + 3 Vercel deployments",
+      "title": "1000-fans real data + 4 deployments",
       "priority": "Critical",
-      "blockedBy": "Shopify/HubSpot/ANTHROPIC/SUPABASE tokens from William"
+      "blockedBy": "Shopify/HubSpot/Anthropic/Supabase tokens from William"
     }
   ],
   "blocked": [
     {
       "title": "SmartLightbox build",
-      "reason": "Waiting on William to confirm Option A",
+      "reason": "Awaiting William confirmation of Option A",
       "waitingOn": "William"
     },
     {
-      "title": "All 4 deployments",
-      "reason": "API tokens + env vars",
-      "waitingOn": "William (in transit)"
+      "title": "4 deployments",
+      "reason": "Shopify + HubSpot + ANTHROPIC_API_KEY + SUPABASE env vars",
+      "waitingOn": "William (in transit to Geneva)"
     }
   ],
   "boardStats": {
     "critical": 8,
     "high": 12,
     "inProgress": 0,
-    "doneToday": 24
+    "doneToday": 25
   }
 }
