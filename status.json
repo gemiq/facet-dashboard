@@ -1,76 +1,76 @@
 {
-  "lastUpdated": "2026-03-23T14:23:00Z",
+  "lastUpdated": "2026-03-23T14:53:00Z",
   "currentTask": {
-    "title": "Idle — all unblocked research complete. Waiting on API keys.",
-    "category": "Ops",
-    "startedAt": "2026-03-23T14:23:00Z",
-    "status": "waiting"
+    "title": "Adding AI semantic search to GemSurf",
+    "category": "AI/R&D",
+    "startedAt": "2026-03-23T14:53:00Z",
+    "status": "in_progress"
   },
   "completedToday": [
     {
-      "title": "Full repo sweep — all 12 GemIQ repos reviewed",
-      "completedAt": "2026-03-23T14:23:00Z",
-      "notes": "ceo-workspace/research/all-repos-status.md — 3 built, 2 MVP'd today, 5 empty. GemHub is completely empty. Key insight: IT team creating repos, not building."
+      "title": "GemSurf Supabase backend wired",
+      "completedAt": "2026-03-23T14:52:00Z",
+      "notes": "schema.sql, db.ts, seed-data.ts, supabase.ts — all pages now use async Supabase fetch. Needs SUPABASE env vars + npm run db:seed to go live."
     },
     {
-      "title": "GemSurf (jewelry-directory) assessment",
-      "completedAt": "2026-03-23T14:15:00Z",
-      "notes": "UI complete (agency Orchids), static data, ~2 weeks to production with Supabase backend"
+      "title": "GemSurf launch strategy written",
+      "completedAt": "2026-03-23T14:36:00Z",
+      "notes": "ceo-workspace/drafts/gemsurf-launch-strategy.md — supply-first, AI features, 12-week timeline"
+    },
+    {
+      "title": "Full repo sweep (12 repos)",
+      "completedAt": "2026-03-23T14:23:00Z",
+      "notes": "ceo-workspace/research/all-repos-status.md — GemHub empty, GemStudio blank, GemSurf most advanced"
     },
     {
       "title": "1000-fans dashboard MVP built",
       "completedAt": "2026-03-23T13:57:00Z",
-      "notes": "Full UI with mock data — KPIs, customer list, detail modal, filters. gemiq/1000-fans"
+      "notes": "Full UI, mock data, filters, KPI bar. gemiq/1000-fans"
     },
     {
       "title": "gem-bot-ai MVP built",
       "completedAt": "2026-03-23T13:36:00Z",
-      "notes": "Streaming chat UI + API route. gemiq/gem-bot-ai. Needs ANTHROPIC_API_KEY."
+      "notes": "Streaming chat + API route. gemiq/gem-bot-ai"
     },
     {
-      "title": "1000-fans PRD written",
+      "title": "IT restructure + EE/ME job postings",
+      "completedAt": "2026-03-23T12:37:00Z",
+      "notes": "ceo-workspace/research/"
+    },
+    {
+      "title": "CEO board briefs + repo assessments",
+      "completedAt": "2026-03-23T12:56:00Z",
+      "notes": "All Critical/High items briefed on Monday"
+    },
+    {
+      "title": "1000-fans PRD",
       "completedAt": "2026-03-23T13:07:00Z",
       "notes": "ceo-workspace/drafts/1000-fans-prd.md"
     },
     {
-      "title": "IT restructure research + EE/ME job postings",
-      "completedAt": "2026-03-23T12:37:00Z",
-      "notes": "ceo-workspace/research/ — costs, legal, 5-month playbook, 2 full JDs"
-    },
-    {
-      "title": "CEO board briefs + all repo assessments",
-      "completedAt": "2026-03-23T12:56:00Z",
-      "notes": "All Critical/High Monday items briefed. gem-bot-ai, gemiq-retouching, gemsurf assessed."
-    },
-    {
-      "title": "Infrastructure: dashboard + briefings + work loop",
+      "title": "2026 game plan + infrastructure",
       "completedAt": "2026-03-23T11:56:00Z",
-      "notes": "gemiq.github.io/facet-dashboard live. 8am/9pm briefings. 10-min work loop."
+      "notes": "Game plan, dashboard, briefings, work loop all live"
     }
   ],
   "queued": [
     {
-      "title": "1000-fans — wire Shopify + HubSpot real data",
+      "title": "1000-fans — wire Shopify + HubSpot",
       "priority": "Critical",
       "category": "AI/R&D",
-      "blockedBy": "Shopify Admin API token + HubSpot Private App token"
+      "blockedBy": "Shopify + HubSpot API keys"
     },
     {
       "title": "gem-bot-ai — deploy to Vercel",
       "priority": "High",
       "category": "AI/R&D",
-      "blockedBy": "ANTHROPIC_API_KEY env var in Vercel"
+      "blockedBy": "ANTHROPIC_API_KEY in Vercel"
     },
     {
-      "title": "GemSurf — connect Supabase backend",
+      "title": "GemSurf — deploy to Vercel + Supabase project",
       "priority": "High",
-      "category": "AI/R&D"
-    },
-    {
-      "title": "GemHub — product definition needed before building",
-      "priority": "Medium",
-      "category": "Strategy",
-      "blockedBy": "William to define what GemHub actually does"
+      "category": "AI/R&D",
+      "blockedBy": "Supabase project creation + env vars"
     }
   ],
   "blocked": [
@@ -81,14 +81,14 @@
     },
     {
       "title": "gem-bot-ai deploy",
-      "reason": "ANTHROPIC_API_KEY in Vercel project env vars",
+      "reason": "ANTHROPIC_API_KEY in Vercel",
       "waitingOn": "William"
     }
   ],
   "boardStats": {
     "critical": 8,
     "high": 12,
-    "inProgress": 0,
-    "doneToday": 13
+    "inProgress": 1,
+    "doneToday": 14
   }
 }
