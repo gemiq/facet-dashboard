@@ -1,41 +1,41 @@
 {
-  "lastUpdated": "2026-03-23T13:13:00Z",
+  "lastUpdated": "2026-03-23T13:43:00Z",
   "currentTask": {
-    "title": "Reviewing gem-bot-ai assessment + planning next build steps",
-    "category": "AI/R&D",
-    "startedAt": "2026-03-23T13:13:00Z",
-    "status": "in_progress"
+    "title": "Monitoring queue — blocked on Shopify + HubSpot API keys",
+    "category": "Ops",
+    "startedAt": "2026-03-23T13:43:00Z",
+    "status": "waiting"
   },
   "completedToday": [
     {
+      "title": "gem-bot-ai MVP built + pushed",
+      "completedAt": "2026-03-23T13:36:00Z",
+      "notes": "Streaming chat UI (dark, mobile), API route with claude-3-5-haiku, 💎 GemBot avatar. Needs ANTHROPIC_API_KEY to deploy on Vercel."
+    },
+    {
       "title": "1000-fans PRD written",
       "completedAt": "2026-03-23T13:07:00Z",
-      "notes": "ceo-workspace/drafts/1000-fans-prd.md — full spec, data model, Shopify+HubSpot integration, 6-week MVP plan. Ready to build once API keys received."
+      "notes": "ceo-workspace/drafts/1000-fans-prd.md — full spec, data model, 6-week MVP plan. Ready to build."
     },
     {
       "title": "IT restructure research brief",
       "completedAt": "2026-03-23T12:37:00Z",
-      "notes": "ceo-workspace/research/it-restructure-shenzhen-to-hk.md — costs, China labor law, 5-month transition playbook"
+      "notes": "ceo-workspace/research/it-restructure-shenzhen-to-hk.md"
     },
     {
       "title": "EE + ME job postings drafted",
       "completedAt": "2026-03-23T12:35:00Z",
-      "notes": "ceo-workspace/research/engineering-job-postings-hk.md — 2 full JDs + HK sourcing strategy"
+      "notes": "ceo-workspace/research/engineering-job-postings-hk.md"
     },
     {
-      "title": "gem-bot-ai assessment",
-      "completedAt": "2026-03-23T12:46:00Z",
-      "notes": "ceo-workspace/research/gem-bot-ai-assessment.md — tech stack mapped, top gaps identified, 3 next steps"
-    },
-    {
-      "title": "gemiq-retouching assessment",
+      "title": "gem-bot-ai + gemiq-retouching assessments",
       "completedAt": "2026-03-23T12:56:00Z",
-      "notes": "ceo-workspace/research/gemiq-retouching-assessment.md — no real jewelry photos, no order flow identified as top gaps"
+      "notes": "Both in ceo-workspace/research/"
     },
     {
       "title": "CEO board briefs written",
       "completedAt": "2026-03-23T12:45:00Z",
-      "notes": "All Critical/High Monday items updated with briefs, first steps, and owners"
+      "notes": "All Critical/High Monday items updated"
     },
     {
       "title": "2026 game plan document",
@@ -43,32 +43,23 @@
       "notes": "ceo-workspace/game-plan/2026-game-plan.md"
     },
     {
-      "title": "Live dashboard deployed",
-      "completedAt": "2026-03-23T11:22:00Z",
-      "notes": "https://gemiq.github.io/facet-dashboard/"
-    },
-    {
-      "title": "Daily briefings + 10-min work loop live",
+      "title": "Live dashboard + daily briefings + work loop deployed",
       "completedAt": "2026-03-23T11:56:00Z",
-      "notes": "8am HKT briefing, 9pm summary, work loop every 10 min"
-    },
-    {
-      "title": "OpenClaw machine provisioned",
-      "completedAt": "2026-03-23T11:27:00Z",
-      "notes": "Git, jq, Codex v0.116.0 installed"
+      "notes": "8am/9pm briefings, 10-min work loop, dashboard at gemiq.github.io/facet-dashboard"
     }
   ],
   "queued": [
     {
       "title": "1000-fans dashboard — build MVP",
-      "priority": "High",
+      "priority": "Critical",
       "category": "AI/R&D",
       "blockedBy": "Waiting on Shopify + HubSpot API keys from William"
     },
     {
-      "title": "gem-bot-ai — implement next 3 steps from assessment",
+      "title": "Deploy gem-bot-ai to Vercel",
       "priority": "High",
-      "category": "AI/R&D"
+      "category": "AI/R&D",
+      "blockedBy": "Waiting on ANTHROPIC_API_KEY env var"
     },
     {
       "title": "Notion API integration",
@@ -79,20 +70,20 @@
   ],
   "blocked": [
     {
-      "title": "1000-fans dashboard build",
+      "title": "1000-fans build",
       "reason": "Need Shopify Admin API token + HubSpot Private App token",
       "waitingOn": "William"
     },
     {
-      "title": "Notion access",
-      "reason": "Need Notion integration token",
+      "title": "gem-bot-ai Vercel deploy",
+      "reason": "Need ANTHROPIC_API_KEY added to Vercel project env vars",
       "waitingOn": "William"
     }
   ],
   "boardStats": {
     "critical": 8,
     "high": 12,
-    "inProgress": 1,
-    "doneToday": 10
+    "inProgress": 0,
+    "doneToday": 11
   }
 }
