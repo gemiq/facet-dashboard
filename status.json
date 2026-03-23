@@ -1,16 +1,21 @@
 {
-  "lastUpdated": "2026-03-23T12:43:00Z",
+  "lastUpdated": "2026-03-23T13:13:00Z",
   "currentTask": {
-    "title": "CEO board briefs + gem-bot-ai repo review — running in parallel",
-    "category": "Ops/Strategy + AI/R&D",
-    "startedAt": "2026-03-23T12:43:00Z",
+    "title": "Reviewing gem-bot-ai assessment + planning next build steps",
+    "category": "AI/R&D",
+    "startedAt": "2026-03-23T13:13:00Z",
     "status": "in_progress"
   },
   "completedToday": [
     {
+      "title": "1000-fans PRD written",
+      "completedAt": "2026-03-23T13:07:00Z",
+      "notes": "ceo-workspace/drafts/1000-fans-prd.md — full spec, data model, Shopify+HubSpot integration, 6-week MVP plan. Ready to build once API keys received."
+    },
+    {
       "title": "IT restructure research brief",
       "completedAt": "2026-03-23T12:37:00Z",
-      "notes": "ceo-workspace/research/it-restructure-shenzhen-to-hk.md — costs, legal, transition playbook, 5-month plan"
+      "notes": "ceo-workspace/research/it-restructure-shenzhen-to-hk.md — costs, China labor law, 5-month transition playbook"
     },
     {
       "title": "EE + ME job postings drafted",
@@ -18,24 +23,34 @@
       "notes": "ceo-workspace/research/engineering-job-postings-hk.md — 2 full JDs + HK sourcing strategy"
     },
     {
-      "title": "Live status dashboard deployed",
-      "completedAt": "2026-03-23T11:22:00Z",
-      "notes": "https://gemiq.github.io/facet-dashboard/"
+      "title": "gem-bot-ai assessment",
+      "completedAt": "2026-03-23T12:46:00Z",
+      "notes": "ceo-workspace/research/gem-bot-ai-assessment.md — tech stack mapped, top gaps identified, 3 next steps"
     },
     {
-      "title": "2026 game plan document created",
+      "title": "gemiq-retouching assessment",
+      "completedAt": "2026-03-23T12:56:00Z",
+      "notes": "ceo-workspace/research/gemiq-retouching-assessment.md — no real jewelry photos, no order flow identified as top gaps"
+    },
+    {
+      "title": "CEO board briefs written",
+      "completedAt": "2026-03-23T12:45:00Z",
+      "notes": "All Critical/High Monday items updated with briefs, first steps, and owners"
+    },
+    {
+      "title": "2026 game plan document",
       "completedAt": "2026-03-23T10:10:00Z",
       "notes": "ceo-workspace/game-plan/2026-game-plan.md"
     },
     {
-      "title": "Daily briefings + 10-min work loop scheduled",
-      "completedAt": "2026-03-23T11:56:00Z",
-      "notes": "8am briefing, 9pm summary, work loop every 10 min"
+      "title": "Live dashboard deployed",
+      "completedAt": "2026-03-23T11:22:00Z",
+      "notes": "https://gemiq.github.io/facet-dashboard/"
     },
     {
-      "title": "Monday.com + GitHub connected",
-      "completedAt": "2026-03-23T09:47:00Z",
-      "notes": "Full CEO board + all gemiq/ private repos"
+      "title": "Daily briefings + 10-min work loop live",
+      "completedAt": "2026-03-23T11:56:00Z",
+      "notes": "8am HKT briefing, 9pm summary, work loop every 10 min"
     },
     {
       "title": "OpenClaw machine provisioned",
@@ -45,21 +60,39 @@
   ],
   "queued": [
     {
-      "title": "1000-fans — repo review + activation plan",
+      "title": "1000-fans dashboard — build MVP",
+      "priority": "High",
+      "category": "AI/R&D",
+      "blockedBy": "Waiting on Shopify + HubSpot API keys from William"
+    },
+    {
+      "title": "gem-bot-ai — implement next 3 steps from assessment",
       "priority": "High",
       "category": "AI/R&D"
     },
     {
-      "title": "gemiq-retouching — repo review",
-      "priority": "High",
-      "category": "AI/R&D"
+      "title": "Notion API integration",
+      "priority": "Medium",
+      "category": "AI/R&D",
+      "blockedBy": "Waiting on Notion integration token from William"
     }
   ],
-  "blocked": [],
+  "blocked": [
+    {
+      "title": "1000-fans dashboard build",
+      "reason": "Need Shopify Admin API token + HubSpot Private App token",
+      "waitingOn": "William"
+    },
+    {
+      "title": "Notion access",
+      "reason": "Need Notion integration token",
+      "waitingOn": "William"
+    }
+  ],
   "boardStats": {
     "critical": 8,
     "high": 12,
-    "inProgress": 2,
-    "doneToday": 9
+    "inProgress": 1,
+    "doneToday": 10
   }
 }
