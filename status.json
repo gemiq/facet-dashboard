@@ -1,9 +1,9 @@
 {
-  "lastUpdated": "2026-03-23T11:52:00Z",
+  "lastUpdated": "2026-03-23T12:26:00Z",
   "currentTask": {
-    "title": "Working the CEO board — writing briefs for Critical/High items",
-    "category": "Ops/Strategy",
-    "startedAt": "2026-03-23T11:52:00Z",
+    "title": "IT restructure research (Shenzhen→HK) + EE/ME job postings — running in parallel",
+    "category": "Ops/Strategy + People/Hiring",
+    "startedAt": "2026-03-23T12:10:00Z",
     "status": "in_progress"
   },
   "completedToday": [
@@ -15,7 +15,7 @@
     {
       "title": "2026 game plan document created",
       "completedAt": "2026-03-23T10:10:00Z",
-      "notes": "ceo-workspace/game-plan/2026-game-plan.md — 192 lines, Q1-Q4 + hiring plan + metrics"
+      "notes": "ceo-workspace/game-plan/2026-game-plan.md — Q1-Q4, hiring plan, metrics"
     },
     {
       "title": "Daily briefings scheduled (8am + 9pm HKT)",
@@ -38,43 +38,44 @@
       "notes": "Git identity, jq, Codex v0.116.0 installed"
     },
     {
-      "title": "Brain dump + triage protocol set up",
-      "completedAt": "2026-03-23T10:46:00Z",
-      "notes": "Work → Monday, notes → GitHub, personal → Reminders"
+      "title": "10-min work loop activated (2 parallel tasks)",
+      "completedAt": "2026-03-23T11:56:00Z",
+      "notes": "Fires every 10 min, picks top 2 priority tasks automatically"
     }
   ],
   "queued": [
     {
-      "title": "Audit CEO board — write briefs for all Critical/High items",
+      "title": "CEO board briefs — all Critical/High items",
       "priority": "High",
       "category": "Ops/Strategy"
     },
     {
-      "title": "IT team restructure — research Shenzhen→HK transition playbook",
-      "priority": "Critical",
-      "category": "Ops/Strategy"
-    },
-    {
-      "title": "gem-bot-ai — review repo, assess current state, identify next steps",
+      "title": "gem-bot-ai — repo review + state assessment",
       "priority": "High",
       "category": "AI/R&D"
     },
     {
-      "title": "1000-fans — review repo and define activation plan",
+      "title": "1000-fans — repo review + activation plan",
       "priority": "High",
       "category": "AI/R&D"
     },
     {
-      "title": "EE/ME engineer job postings — draft and post to LinkedIn/JobsDB HK",
-      "priority": "Critical",
-      "category": "People/Hiring"
+      "title": "gemiq-retouching — repo review",
+      "priority": "High",
+      "category": "AI/R&D"
     }
   ],
-  "blocked": [],
+  "blocked": [
+    {
+      "title": "Dashboard auto-updates from isolated agents",
+      "reason": "Isolated cron agents run in sandboxed sessions — can't write to local files directly. Working on fix.",
+      "waitingOn": "Architecture fix (in progress)"
+    }
+  ],
   "boardStats": {
     "critical": 8,
     "high": 12,
-    "inProgress": 3,
+    "inProgress": 2,
     "doneToday": 7
   }
 }
