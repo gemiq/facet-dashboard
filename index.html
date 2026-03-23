@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Facet — Chief of Staff</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      background: #0a0a0a;
+      color: #e4e4e7;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", sans-serif;
+      line-height: 1.6;
+      padding: 1rem;
+      max-width: 640px;
+      margin: 0 auto;
+    }
+
+    header {
+      padding: 1.5rem 0 1rem;
+      border-bottom: 1px solid #1e1e24;
+      margin-bottom: 1.5rem;
+    }
+
+    header h1 {
+      font-size: 1.4rem;
+      font-weight: 600;
+      color: #fff;
+    }
+
+    .last-updated {
+      font-size: 0.8rem;
+      color: #71717a;
+      margin-top: 0.25rem;
+    }
+
+    .section {
+      margin-bottom: 1.5rem;
+    }
+
+    .section-title {
+      font-size: 0.85rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: #a1a1aa;
+      margin-bottom: 0.75rem;
+    }
+
+    .card {
+      background: #141418;
+      border: 1px solid #1e1e24;
+      border-radius: 10px;
+      padding: 1rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .card-title {
+      font-size: 0.95rem;
+      font-weight: 500;
+      color: #fff;
+    }
+
+    .card-meta {
+      font-size: 0.78rem;
+      color: #71717a;
+      margin-top: 0.25rem;
+    }
+
+    .badge {
+      display: inline-block;
+      font-size: 0.7rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      padding: 0.15em 0.55em;
+      border-radius: 4px;
+      margin-left: 0.5rem;
+      vertical-align: middle;
+    }
+
+    .badge-progress {
+      background: rgba(99, 102, 241, 0.15);
+      color: #818cf8;
+    }
+
+    .badge-done {
+      background: rgba(34, 197, 94, 0.12);
+      color: #4ade80;
+    }
+
+    .badge-critical {
+      background: rgba(239, 68, 68, 0.12);
+      color: #f87171;
+    }
+
+    .badge-high {
+      background: rgba(251, 191, 36, 0.12);
+      color: #fbbf24;
+    }
+
+    .badge-blocked {
+      background: rgba(239, 68, 68, 0.15);
+      color: #f87171;
+    }
+
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 0.5rem;
+    }
+
+    .stat-card {
+      background: #141418;
+      border: 1px solid #1e1e24;
+      border-radius: 10px;
+      padding: 0.9rem 1rem;
+      text-align: center;
+    }
+
+    .stat-value {
+      font-size: 1.6rem;
+      font-weight: 700;
+      color: #fff;
+    }
+
+    .stat-label {
+      font-size: 0.72rem;
+      color: #71717a;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      margin-top: 0.1rem;
+    }
+
+    .stat-critical .stat-value { color: #f87171; }
+    .stat-high .stat-value { color: #fbbf24; }
+    .stat-progress .stat-value { color: #818cf8; }
+    .stat-done .stat-value { color: #4ade80; }
+
+    .empty-state {
+      color: #52525b;
+      font-size: 0.85rem;
+      font-style: italic;
+      padding: 0.5rem 0;
+    }
+
+    .completed-time {
+      font-size: 0.75rem;
+      color: #52525b;
+    }
+
+    .decision-tag {
+      display: inline-block;
+      font-size: 0.68rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      background: rgba(239, 68, 68, 0.15);
+      color: #f87171;
+      padding: 0.15em 0.5em;
+      border-radius: 4px;
+      margin-top: 0.35rem;
+    }
+
+    #error-banner {
+      display: none;
+      background: rgba(239, 68, 68, 0.1);
+      border: 1px solid rgba(239, 68, 68, 0.3);
+      color: #f87171;
+      padding: 0.6rem 1rem;
+      border-radius: 8px;
+      font-size: 0.82rem;
+      margin-bottom: 1rem;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Facet 💎 — Chief of Staff</h1>
+    <div class="last-updated" id="last-updated">Loading...</div>
+  </header>
+
+  <div id="error-banner"></div>
+
+  <div class="section" id="current-section">
+    <div class="section-title">🔥 Working On Now</div>
+    <div id="current-task"></div>
+  </div>
+
+  <div class="section">
+    <div class="section-title">✅ Completed Today</div>
+    <div id="completed-list"></div>
+  </div>
+
+  <div class="section">
+    <div class="section-title">⏳ Queued</div>
+    <div id="queued-list"></div>
+  </div>
+
+  <div class="section">
+    <div class="section-title">🚫 Blocked</div>
+    <div id="blocked-list"></div>
+  </div>
+
+  <div class="section">
+    <div class="section-title">📊 Board Stats</div>
+    <div id="board-stats"></div>
+  </div>
+
+  <script>
+    function timeAgo(dateStr) {
+      const now = new Date();
+      const then = new Date(dateStr);
+      const diffMs = now - then;
+      const mins = Math.floor(diffMs / 60000);
+      if (mins < 1) return 'just now';
+      if (mins < 60) return mins + ' minute' + (mins === 1 ? '' : 's') + ' ago';
+      const hrs = Math.floor(mins / 60);
+      if (hrs < 24) return hrs + ' hour' + (hrs === 1 ? '' : 's') + ' ago';
+      const days = Math.floor(hrs / 24);
+      return days + ' day' + (days === 1 ? '' : 's') + ' ago';
+    }
+
+    function formatTime(dateStr) {
+      return new Date(dateStr).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
+    }
+
+    function statusBadge(status) {
+      const map = {
+        'in_progress': '<span class="badge badge-progress">In Progress</span>',
+        'done': '<span class="badge badge-done">Done</span>',
+        'blocked': '<span class="badge badge-blocked">Blocked</span>',
+      };
+      return map[status] || '<span class="badge">' + status + '</span>';
+    }
+
+    function priorityBadge(priority) {
+      const cls = priority === 'Critical' ? 'badge-critical' : 'badge-high';
+      return '<span class="badge ' + cls + '">' + priority + '</span>';
+    }
+
+    function escapeHtml(str) {
+      const div = document.createElement('div');
+      div.textContent = str;
+      return div.innerHTML;
+    }
+
+    function render(data) {
+      // Last updated
+      document.getElementById('last-updated').textContent =
+        'Last updated: ' + timeAgo(data.lastUpdated);
+
+      // Current task
+      var currentEl = document.getElementById('current-task');
+      if (data.currentTask) {
+        currentEl.innerHTML =
+          '<div class="card">' +
+            '<div class="card-title">' + escapeHtml(data.currentTask.title) +
+              statusBadge(data.currentTask.status) + '</div>' +
+            '<div class="card-meta">' + escapeHtml(data.currentTask.category) +
+              ' · Started ' + formatTime(data.currentTask.startedAt) + '</div>' +
+          '</div>';
+      } else {
+        currentEl.innerHTML = '<div class="empty-state">No active task</div>';
+      }
+
+      // Completed
+      var completedEl = document.getElementById('completed-list');
+      if (data.completedToday && data.completedToday.length > 0) {
+        completedEl.innerHTML = data.completedToday.map(function(item) {
+          return '<div class="card">' +
+            '<div class="card-title">' + escapeHtml(item.title) + '</div>' +
+            '<div class="card-meta">' + escapeHtml(item.notes || '') +
+              ' <span class="completed-time">· ' + formatTime(item.completedAt) + '</span></div>' +
+          '</div>';
+        }).join('');
+      } else {
+        completedEl.innerHTML = '<div class="empty-state">Nothing completed yet today</div>';
+      }
+
+      // Queued
+      var queuedEl = document.getElementById('queued-list');
+      if (data.queued && data.queued.length > 0) {
+        queuedEl.innerHTML = data.queued.map(function(item) {
+          return '<div class="card">' +
+            '<div class="card-title">' + escapeHtml(item.title) +
+              priorityBadge(item.priority) + '</div>' +
+            '<div class="card-meta">' + escapeHtml(item.category) + '</div>' +
+          '</div>';
+        }).join('');
+      } else {
+        queuedEl.innerHTML = '<div class="empty-state">Queue is empty</div>';
+      }
+
+      // Blocked
+      var blockedEl = document.getElementById('blocked-list');
+      if (data.blocked && data.blocked.length > 0) {
+        blockedEl.innerHTML = data.blocked.map(function(item) {
+          return '<div class="card">' +
+            '<div class="card-title">' + escapeHtml(item.title) + '</div>' +
+            '<div class="card-meta">' + escapeHtml(item.reason || '') + '</div>' +
+            '<div class="decision-tag">Decision Needed</div>' +
+          '</div>';
+        }).join('');
+      } else {
+        blockedEl.innerHTML = '<div class="empty-state">Nothing blocked — all clear</div>';
+      }
+
+      // Board stats
+      var statsEl = document.getElementById('board-stats');
+      if (data.boardStats) {
+        var s = data.boardStats;
+        statsEl.innerHTML =
+          '<div class="stats-grid">' +
+            '<div class="stat-card stat-critical"><div class="stat-value">' + s.critical + '</div><div class="stat-label">Critical</div></div>' +
+            '<div class="stat-card stat-high"><div class="stat-value">' + s.high + '</div><div class="stat-label">High</div></div>' +
+            '<div class="stat-card stat-progress"><div class="stat-value">' + s.inProgress + '</div><div class="stat-label">In Progress</div></div>' +
+            '<div class="stat-card stat-done"><div class="stat-value">' + s.doneToday + '</div><div class="stat-label">Done Today</div></div>' +
+          '</div>';
+      }
+
+      // Hide error
+      document.getElementById('error-banner').style.display = 'none';
+    }
+
+    function fetchStatus() {
+      fetch('../status.json?t=' + Date.now())
+        .then(function(res) {
+          if (!res.ok) throw new Error('HTTP ' + res.status);
+          return res.json();
+        })
+        .then(render)
+        .catch(function(err) {
+          var banner = document.getElementById('error-banner');
+          banner.textContent = 'Failed to load status: ' + err.message;
+          banner.style.display = 'block';
+        });
+    }
+
+    fetchStatus();
+    setInterval(fetchStatus, 30000);
+  </script>
+</body>
+</html>
