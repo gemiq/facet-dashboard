@@ -1,96 +1,102 @@
 {
-  "lastUpdated": "2026-03-23T15:43:00Z",
+  "lastUpdated": "2026-03-24T17:13:00Z",
   "currentTask": {
-    "title": "Building gemiq-retouching admin dashboard",
-    "category": "AI/R&D",
-    "startedAt": "2026-03-23T15:43:00Z",
+    "title": "Overnight research — SmartLightbox product definition + n8n audit",
+    "category": "AI/R&D + Ops",
+    "startedAt": "2026-03-24T17:13:00Z",
     "status": "in_progress"
   },
   "completedToday": [
     {
-      "title": "gemiq-retouching order flow built",
-      "completedAt": "2026-03-23T15:38:00Z",
-      "notes": "5-step order form, drag-and-drop upload, Supabase schema, all CTAs linked. gemiq/gemiq-retouching"
+      "title": "AI workflows + agents playbook written",
+      "completedAt": "2026-03-24T17:05:00Z",
+      "notes": "ceo-workspace/research/ai-workflows-playbook.md — full CEO guide, 90-day roadmap, 49hr/week savings plan"
     },
     {
-      "title": "Townhall presentation draft",
-      "completedAt": "2026-03-23T15:26:00Z",
-      "notes": "ceo-workspace/drafts/townhall-2026-q1.md — 6 slides, speaker notes, honest + direct"
+      "title": "Jewelry tools market research",
+      "completedAt": "2026-03-24T17:08:00Z",
+      "notes": "ceo-workspace/research/jewelry-tools-market.md — First 3 SKUs: loupe $39, tweezers $29, gem tray $22. $5k test → $22k potential revenue"
     },
     {
-      "title": "smartlightbox assessment",
-      "completedAt": "2026-03-23T15:18:00Z",
-      "notes": "Full mobile app prototype (camera, AI, turntable, GemStudio). ceo-workspace/research/smartlightbox-assessment.md"
+      "title": "Geneva meeting prep written",
+      "completedAt": "2026-03-24T16:57:00Z",
+      "notes": "ceo-workspace/drafts/planning/this-week-meetings.md — board, IT with Paul, townhall, Jetta, Gustavo"
     },
     {
-      "title": "GemSurf AI semantic search",
+      "title": "Deep planning briefs (1000-fans, IT, gem-bot-ai)",
+      "completedAt": "2026-03-24T16:42:00Z",
+      "notes": "ceo-workspace/drafts/planning/ — hard questions posted to Monday"
+    },
+    {
+      "title": "All 37 Monday tasks briefed + statuses set",
+      "completedAt": "2026-03-24T16:30:00Z",
+      "notes": "Ready to Review (10), Needs Decision (10), Working on it (13)"
+    },
+    {
+      "title": "gemiq-retouching order flow + admin dashboard",
+      "completedAt": "2026-03-23T15:49:00Z",
+      "notes": "5-step order form, upload, Supabase schema, admin panel"
+    },
+    {
+      "title": "GemSurf Supabase backend + AI search",
       "completedAt": "2026-03-23T14:59:00Z",
-      "notes": "NL search API + AI bio generator + AISearchBar component"
+      "notes": "Full schema, data layer, semantic search, bio generator"
     },
     {
-      "title": "GemSurf Supabase backend",
-      "completedAt": "2026-03-23T14:52:00Z",
-      "notes": "Full schema, data layer, seed data. gemiq/jewelry-directory"
+      "title": "gem-bot-ai MVP + production-ready",
+      "completedAt": "2026-03-23T15:57:00Z",
+      "notes": "Streaming chat, welcome screen, deploy config"
     },
     {
-      "title": "GemSurf launch strategy",
-      "completedAt": "2026-03-23T14:36:00Z",
-      "notes": "ceo-workspace/drafts/gemsurf-launch-strategy.md"
+      "title": "1000-fans dashboard + Supabase backend",
+      "completedAt": "2026-03-24T16:11:00Z",
+      "notes": "Full UI + schema + API routes + seed data"
     },
     {
-      "title": "1000-fans dashboard MVP + PRD",
-      "completedAt": "2026-03-23T13:57:00Z",
-      "notes": "Full UI + PRD. gemiq/1000-fans"
-    },
-    {
-      "title": "gem-bot-ai MVP",
-      "completedAt": "2026-03-23T13:36:00Z",
-      "notes": "Streaming chat + API. gemiq/gem-bot-ai"
-    },
-    {
-      "title": "IT restructure + EE/ME job postings + all repo assessments",
-      "completedAt": "2026-03-23T12:56:00Z",
-      "notes": "ceo-workspace/research/ — 6 research docs"
-    },
-    {
-      "title": "CEO board briefs + 2026 game plan + infrastructure",
+      "title": "2026 game plan + infrastructure + all research",
       "completedAt": "2026-03-23T11:56:00Z",
-      "notes": "All Monday items briefed, game plan live, dashboard + work loop running"
+      "notes": "Game plan, IT research, job postings, repo assessments, dashboard, work loop"
     }
   ],
   "queued": [
     {
+      "title": "SmartLightbox — product definition research",
+      "priority": "High",
+      "category": "AI/R&D"
+    },
+    {
+      "title": "n8n workflow audit",
+      "priority": "Medium",
+      "category": "Ops",
+      "blockedBy": "Need n8n login from William"
+    },
+    {
       "title": "1000-fans — wire Shopify + HubSpot",
       "priority": "Critical",
-      "blockedBy": "Shopify + HubSpot API keys"
+      "blockedBy": "API tokens from William"
     },
     {
-      "title": "Deploy all 3 apps to Vercel",
+      "title": "Deploy gem-bot-ai, GemSurf, retouching to Vercel",
       "priority": "High",
       "blockedBy": "ANTHROPIC_API_KEY + SUPABASE env vars from William"
-    },
-    {
-      "title": "GemHub — product definition + build",
-      "priority": "Medium",
-      "blockedBy": "William to define what GemHub does"
     }
   ],
   "blocked": [
     {
-      "title": "1000-fans real data",
-      "reason": "Shopify + HubSpot API tokens",
-      "waitingOn": "William"
-    },
-    {
       "title": "3 Vercel deployments",
       "reason": "ANTHROPIC_API_KEY + SUPABASE env vars",
-      "waitingOn": "William"
+      "waitingOn": "William (in transit)"
+    },
+    {
+      "title": "1000-fans real data",
+      "reason": "Shopify + HubSpot tokens",
+      "waitingOn": "William (in transit)"
     }
   ],
   "boardStats": {
     "critical": 8,
     "high": 12,
-    "inProgress": 1,
-    "doneToday": 16
+    "inProgress": 0,
+    "doneToday": 20
   }
 }
