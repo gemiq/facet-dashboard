@@ -1,21 +1,36 @@
 {
-  "lastUpdated": "2026-03-23T15:03:00Z",
+  "lastUpdated": "2026-03-23T15:43:00Z",
   "currentTask": {
-    "title": "Evening summary prep — William boarding ~22:45",
-    "category": "Ops",
-    "startedAt": "2026-03-23T15:03:00Z",
+    "title": "Building gemiq-retouching admin dashboard",
+    "category": "AI/R&D",
+    "startedAt": "2026-03-23T15:43:00Z",
     "status": "in_progress"
   },
   "completedToday": [
     {
-      "title": "GemSurf AI semantic search built",
-      "completedAt": "2026-03-23T14:59:00Z",
-      "notes": "NL search API (/api/search), AI bio generator (/api/generate-bio), AISearchBar component, smart/basic search toggle with reasoning chips"
+      "title": "gemiq-retouching order flow built",
+      "completedAt": "2026-03-23T15:38:00Z",
+      "notes": "5-step order form, drag-and-drop upload, Supabase schema, all CTAs linked. gemiq/gemiq-retouching"
     },
     {
-      "title": "GemSurf Supabase backend wired",
+      "title": "Townhall presentation draft",
+      "completedAt": "2026-03-23T15:26:00Z",
+      "notes": "ceo-workspace/drafts/townhall-2026-q1.md — 6 slides, speaker notes, honest + direct"
+    },
+    {
+      "title": "smartlightbox assessment",
+      "completedAt": "2026-03-23T15:18:00Z",
+      "notes": "Full mobile app prototype (camera, AI, turntable, GemStudio). ceo-workspace/research/smartlightbox-assessment.md"
+    },
+    {
+      "title": "GemSurf AI semantic search",
+      "completedAt": "2026-03-23T14:59:00Z",
+      "notes": "NL search API + AI bio generator + AISearchBar component"
+    },
+    {
+      "title": "GemSurf Supabase backend",
       "completedAt": "2026-03-23T14:52:00Z",
-      "notes": "schema.sql, db.ts, seed-data.ts — all pages async. Needs SUPABASE env vars."
+      "notes": "Full schema, data layer, seed data. gemiq/jewelry-directory"
     },
     {
       "title": "GemSurf launch strategy",
@@ -23,14 +38,9 @@
       "notes": "ceo-workspace/drafts/gemsurf-launch-strategy.md"
     },
     {
-      "title": "Full repo sweep — 12 repos",
-      "completedAt": "2026-03-23T14:23:00Z",
-      "notes": "GemHub empty, GemStudio blank. Report: ceo-workspace/research/all-repos-status.md"
-    },
-    {
-      "title": "1000-fans dashboard MVP",
+      "title": "1000-fans dashboard MVP + PRD",
       "completedAt": "2026-03-23T13:57:00Z",
-      "notes": "Full UI + mock data. gemiq/1000-fans"
+      "notes": "Full UI + PRD. gemiq/1000-fans"
     },
     {
       "title": "gem-bot-ai MVP",
@@ -38,41 +48,26 @@
       "notes": "Streaming chat + API. gemiq/gem-bot-ai"
     },
     {
-      "title": "1000-fans PRD",
-      "completedAt": "2026-03-23T13:07:00Z",
-      "notes": "ceo-workspace/drafts/1000-fans-prd.md"
-    },
-    {
-      "title": "IT restructure research + EE/ME job postings",
-      "completedAt": "2026-03-23T12:37:00Z",
-      "notes": "ceo-workspace/research/"
-    },
-    {
-      "title": "CEO board briefs + all repo assessments",
+      "title": "IT restructure + EE/ME job postings + all repo assessments",
       "completedAt": "2026-03-23T12:56:00Z",
-      "notes": "All Critical/High Monday items briefed"
+      "notes": "ceo-workspace/research/ — 6 research docs"
     },
     {
-      "title": "2026 game plan + full infrastructure",
+      "title": "CEO board briefs + 2026 game plan + infrastructure",
       "completedAt": "2026-03-23T11:56:00Z",
-      "notes": "Game plan, dashboard, briefings, work loop"
+      "notes": "All Monday items briefed, game plan live, dashboard + work loop running"
     }
   ],
   "queued": [
     {
       "title": "1000-fans — wire Shopify + HubSpot",
       "priority": "Critical",
-      "blockedBy": "Shopify + HubSpot API keys from William"
+      "blockedBy": "Shopify + HubSpot API keys"
     },
     {
-      "title": "Deploy GemSurf to Vercel",
+      "title": "Deploy all 3 apps to Vercel",
       "priority": "High",
-      "blockedBy": "Supabase project + SUPABASE env vars"
-    },
-    {
-      "title": "Deploy gem-bot-ai to Vercel",
-      "priority": "High",
-      "blockedBy": "ANTHROPIC_API_KEY in Vercel"
+      "blockedBy": "ANTHROPIC_API_KEY + SUPABASE env vars from William"
     },
     {
       "title": "GemHub — product definition + build",
@@ -83,7 +78,7 @@
   "blocked": [
     {
       "title": "1000-fans real data",
-      "reason": "Shopify Admin API token + HubSpot Private App token",
+      "reason": "Shopify + HubSpot API tokens",
       "waitingOn": "William"
     },
     {
@@ -95,7 +90,7 @@
   "boardStats": {
     "critical": 8,
     "high": 12,
-    "inProgress": 0,
-    "doneToday": 15
+    "inProgress": 1,
+    "doneToday": 16
   }
 }
